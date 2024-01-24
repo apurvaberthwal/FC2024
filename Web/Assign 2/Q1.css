@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    justify-content: space-around;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
+
+.dot {
+    border-style: dotted;
+    border-width: 10px;
+}
+
+.circle {
+    border-radius: 80%;
+    border: 10px solid yellow;
+    padding-top: 5px;
+}
+
+.square {
+  
+    border: 5px solid red;
+    outline-offset: 5px;
+  outline: 5px solid red;
+  }
+
+
+.circle img{
+    
+    border-radius: 80%;
+}

@@ -1,0 +1,106 @@
+body{
+    font-family: 'Roboto', sans-serif;
+
+}
+
+
+
+
+
+nav{
+    
+    background-color: #75c3aa;
+    padding: 1px;
+
+}
+.name{
+    text-align: center;
+    font-size: 26px;
+    color: aliceblue;
+}
+
+.master{
+    display: table-cell;
+}
+.hero img {
+    float: left; 
+    margin-right: 50px;
+    box-shadow: 10px 10px 5px #888888;
+    border-radius: 20%;
+    
+    border: 5px solid #75c3aa;
+    width: 250px;
+    margin-top: 20px;
+    margin-left: 40px;
+
+    
+}
+
+.hero p {
+    overflow: hidden; 
+    font-size: 20px;/* Clear the float and contain the text within the container */
+    
+
+}
+.hero h1{
+    margin-bottom: -3px;
+}
+.poem {
+    white-space: pre-line;
+}
+ul{
+    font-size: 20px;
+    list-style-type: none;  
+   
+  }
+ul li.l1{
+    list-style-image:url("assets/Anemo.svg") ;
+    
+  }
+
+  ul li.l2{
+    list-style-image:url("assets/Electro.svg") ;
+    
+  }  
+ul li.l3{
+    list-style-image:url("assets/Geo.svg") ;
+    
+  }
+
+ul li.l4{
+    list-style-image: url("assets/Cryo.svg") ;
+    
+  }
+
+
+
+
+a{
+  text-decoration: none;
+}
+
+/* unvisited link */
+a:link {
+    color:  #a5c83b;
+}
+/* visited link */
+a:visited {
+    color:#4cc2f1;
+  }
+
+
+
+/* mouse over link */
+a:hover {
+  color: #ef7938;
+}
+/* selected link */
+a:active {
+  color: blue;
+}
+
+
+
+
+
+  
