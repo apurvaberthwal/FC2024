@@ -1,0 +1,50 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    color: #d4c128;
+}
+th{
+
+    background-color: #de8704;
+    padding: 1px;
+    text-align: left;
+    height: 50px;
+    font-size: 25px;
+
+}
+table {
+    border-collapse: collapse;
+}
+
+   
+td{
+    background-color: #222536;
+    border: none;
+    width: 200px;
+    padding: 10px;
+}
+label {
+    text-align: right;
+}
+
+.buttons {
+    background-color: #de8704;
+    padding: 10px; 
+   
+}
+
+#button1{
+    background-color: #62af5e;
+    font-size: 20px;
+    border: 0px;
+    padding: 8px;
+    color: aliceblue;
+}
+
+#button2{
+    background-color: #d9544f;
+    font-size: 20px;
+    border: 0px;
+    padding: 8px;
+    color: aliceblue;
+}

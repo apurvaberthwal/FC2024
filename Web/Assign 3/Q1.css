@@ -1,0 +1,28 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+
+th{
+    color: red;
+    background-color: #ffffaa;
+    font-size: 30px;
+    
+}
+td{
+    background-color:#00ccff;
+    
+    padding: 5px;
+    padding-left: 20px;
+    
+}
+#age{
+    font-size: 15px;
+}
+button{
+    margin: 6px;
+    
+    width: 150px;
+    padding:5px
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="Q2.css">
+</head>
+<body>
+
+    
+    <table>
+         
+            <th class="head" colspan="2">Sign-up</th>
+        
+    
+        <div class="container">
+        <form>
+            <tr>
+                <td align="right">
+                    <label for="first_name">First Name:</label>
+                    </td>
+                <td><input type="text" id="fisrt_name" name="name" title="Enter First Name" required placeholder="Enter your first name "></td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label for="last_name">Last Name:</label>
+                    
+                    </td>
+                <td><input type="text" id="last_name" name="name" title="Enter Last Name" required placeholder="Enter your first name "></td>
+            </tr>
+            <tr>
+                <td align="right">
+                    <label for="DOB">Date of birth:</label>
+                    </td>
+                <td>
+                    <input type="date" id="dob" name="dob" title="Select DOB">
+
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Gender:</td>
+                <td>
+                    <label><input type="radio" name="gender" value="male"> Male</label>
+                    <label><input type="radio" name="gender" value="female"> Female</label>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Country:</td>
+                <td>
+                    <select name="age" id="age" title="Enter name">
+                        <option value="" disabled selected hidden >Country</option>
+                       
+                        <option value="Aus">Aus</option>
+                        <option value="US">US</option>
+                        <option value="UK">UK</option>
+                        <option value="IND">IND</option>
+                        <option value="JP">JP</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td align="right">Email:</td>
+                <td><input type="email" id="email" name="name" title="Enter YOur email " required placeholder="Enter your email "></td>
+            </tr>
+            <tr>
+                <td align="right">Phone Number:</td>
+                <td><input type="number" id="number" name="number" title="Enter YOur number  " required placeholder="Enter your phone number  "></td>
+            </tr>
+            <tr>
+                <td align="right">Password:</td>
+                <td><input type="password" id="pwd" name="pwd" title="Enter YOur email " required placeholder="Enter your password "  minlength="8"> </td>
+            </tr>
+            <tr>
+                <td align="right">Confirm Password:</td>
+                <td><input type="password" id="confirm-password" name="confirm-password" title="Enter YOur email "  minlength="8" required placeholder="Enter your password "></td>
+            
+        </div>   
+        <tr>
+            <td colspan="2" align="right">
+                <input type="checkbox" required title="T&C">
+                <label for="tnc" style="font-size: 15px;">I Agree to the Terms of Use</label> 
+                
+            </td>
+
+         
+            <tr>
+                <td colspan="2" align="right" class="buttons">
+                    
+                    <button id="button1" type="submit">Submit</button>
+                    <button id="button2" type="reset">Cancel</button>
+                </td>
+            </tr>
+        </div>
+        </form>
+    </table>
+</body>
+</html>
