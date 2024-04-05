@@ -1,0 +1,27 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guess the Number</title>
+</head>
+<body>
+<input type="number" id="guessInput" placeholder="Enter your guess">
+<button onclick="checkGuess()">Check Guess</button>
+<p id="result"></p>
+
+<script>
+var randomNumber = Math.floor(Math.random() * 100) + 1;
+
+function checkGuess() {
+    var guess = parseInt(document.getElementById("guessInput").value);
+    if (guess === randomNumber) {
+        document.getElementById("result").innerText = "Congratulations! You guessed the number!";
+    } else if (guess < randomNumber) {
+        document.getElementById("result").innerText = "Too low. Try again.";
+    } else {
+        document.getElementById("result").innerText = "Too high. Try again.";
+    }
+}
+</script>
+</body>
+</html>

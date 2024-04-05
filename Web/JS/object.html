@@ -1,0 +1,26 @@
+<html>
+<body>
+<p id="p1"> </p>
+<p id="p2"> </p>
+<p id="p3"> </p>
+<p id="p4"> </p>
+<p id="p5"> </p>
+
+<script>
+
+var person = new Object();
+person.firstName="Steve";
+person["lastName"]="Jobs";
+person.age=22;
+		person.getName=function(){
+	return this.firstName +" "+ this.lastName 
+}
+document.getElementById("p1").innerHTML=person.firstName
+document.getElementById("p2").innerHTML=person.lastName
+document.getElementById("p3").innerHTML=person["firstName"]
+document.getElementById("p4").innerHTML=person["lastName"]
+document.getElementById("p5").innerHTML=person.getName()
+	</script>
+</body>
+</html>
+

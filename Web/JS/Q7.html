@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+9. <html lang="en">
+10. <head>
+11. <meta charset="UTF-8">
+12. <meta name="viewport" content="width=device-width, initial-scale=1.0">
+13. <title>Simple Calculator</title>
+14. <style>
+15.     body {
+16.         font-family: Arial, sans-serif;
+17.     }
+18.     .calculator {
+19.         width: 300px;
+20.         margin: 50px auto;
+21.         border: 1px solid #ccc;
+22.         padding: 20px;
+23.         border-radius: 5px;
+24.         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+25.     }
+26.     input[type="number"] {
+27.         width: 100%;
+28.         padding: 8px;
+29.         margin-bottom: 10px;
+30.     }
+31.     button {
+32.         width: 100%;
+33.         padding: 10px;
+34.         margin-top: 10px;
+35.         cursor: pointer;
+36.         background-color: #4CAF50;
+37.         color: white;
+38.         border: none;
+39.         border-radius: 5px;
+40.     }
+41. </style>
+42. </head>
+43. <body>
+44. 
+45. <div class="calculator">
+46.     <input type="number" id="num1" placeholder="Enter first number">
+47.     <input type="number" id="num2" placeholder="Enter second number">
+48.     <select id="operation">
+49.         <option value="add">Addition</option>
+50.         <option value="subtract">Subtraction</option>
+51.         <option value="multiply">Multiplication</option>
+52.         <option value="divide">Division</option>
+53.     </select>
+54.     <button onclick="calculate()">Calculate</button>
+55.     <p id="result"></p>
+56. </div>
+57. 
+58. <script>
+59.     function calculate() {
+60.         var num1 = parseFloat(document.getElementById("num1").value);
+61.         var num2 = parseFloat(document.getElementById("num2").value);
+62.         var operation = document.getElementById("operation").value;
+63.         var result;
+64. 
+65.         switch(operation) {
+66.             case "add":
+67.                 result = num1 + num2;
+68.                 break;
+69.             case "subtract":
+70.                 result = num1 - num2;
+71.                 break;
+72.             case "multiply":
+73.                 result = num1 * num2;
+74.                 break;
+75.             case "divide":
+76.                 if (num2 !== 0) {
+77.                     result = num1 / num2;
+78.                 } else {
+79.                     result = "Cannot divide by zero";
+80.                 }
+81.                 break;
+82.         }
+83. 
+84.         document.getElementById("result").innerText = "Result: " + result;
+85.     }
+86. </script>
+87. 
+88. </body>
+89. </html>

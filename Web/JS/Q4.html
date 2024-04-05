@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+</head>
+<body>
+    <h2>Student Management System</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name">
+    <label for="grade">Grade:</label>
+    <input type="text" id="grade">
+    <button onclick="addStudent()">Add Student</button>
+    <button onclick="displayStudents()">Display Students</button>
+    <button onclick="deleteStudents()">Delete Students</button>
+    <ul id="studentList"></ul>
+
+    <script>
+        let students = [];
+
+        function addStudent() {
+            const name = document.getElementById('name').value;
+            const grade = document.getElementById('grade').value;
+            const student = { name, grade };
+            students.push(student);
+        }
+
+        function displayStudents() {
+            const studentList = document.getElementById('studentList');
+            studentList.innerHTML = '';
+            students.forEach(student => {
+                const li = document.createElement('li');
+                li.textContent = `${student.name} - Grade: ${student.grade}`;
+                studentList.appendChild(li);
+            });
+        }
+
+        function deleteStudents() {
+            students = [];
+            document.getElementById('studentList').innerHTML = '';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>Currency Converter</title>
+</head>
+<body>
+<input type="number" id="amountInput" placeholder="Enter amount">
+<select id="currencySelect">
+    <option value="USD">USD</option>
+    <option value="EUR">EUR</option>
+    <option value="GBP">GBP</option>
+    <!-- Add more currency options as needed -->
+</select>
+<button onclick="convertCurrency()">Convert</button>
+<p id="convertedAmount"></p>
+
+<script>
+function convertCurrency() {
+    var amount = parseFloat(document.getElementById("amountInput").value);
+    var currency = document.getElementById("currencySelect").value;
+    var convertedAmount;
+
+    // Conversion rates
+    if (currency === "USD") {
+        convertedAmount = amount * 1.21; // Example conversion rate
+    } else if (currency === "EUR") {
+        convertedAmount = amount * 0.89; // Example conversion rate
+    } else if (currency === "GBP") {
+        convertedAmount = amount * 0.73; // Example conversion rate
+    }
+
+    document.getElementById("convertedAmount").innerText = "Converted Amount: " + convertedAmount.toFixed(2) + " " + currency;
+}
+</script>
+</body>
+</html>

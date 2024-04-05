@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of Digits Calculator</title>
+    <script>
+        function sumOfDigits(number) {
+            var numString = Math.abs(number).toString();
+            var sum = 0;
+            for (var i = 0; i < numString.length; i++) {
+                sum += parseInt(numString[i]);
+            }
+            return sum;
+        }
+
+        function calculateAndDisplay() {
+            var inputValue = document.getElementById("numberInput").value;
+
+            var number = parseInt(inputValue);
+            var digitSum = sumOfDigits(number);
+
+            document.getElementById("result").innerHTML = "Sum of digits: " + digitSum;
+        }
+    </script>
+</head>
+<body>
+    <h1>Sum of Digits Calculator</h1>
+    <label for="numberInput">Enter a number:</label>
+    <input type="text" id="numberInput">
+    <button onclick="calculateAndDisplay()">Calculate Sum</button>
+    <p id="result"></p>
+</body>
+</html>

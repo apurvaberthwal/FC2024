@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Quiz</title>
+</head>
+<body>
+<form id="quizForm">
+    <h3>Question 1: What is the capital of France?</h3>
+    <label><input type="radio" name="q1" value="Paris"> Paris</label><br>
+    <label><input type="radio" name="q1" value="London"> London</label><br>
+    <label><input type="radio" name="q1" value="Berlin"> Berlin</label><br>
+
+    <h3>Question 2: What is 2 + 2?</h3>
+    <label><input type="radio" name="q2" value="3"> 3</label><br>
+    <label><input type="radio" name="q2" value="4"> 4</label><br>
+    <label><input type="radio" name="q2" value="5"> 5</label><br>
+
+    <button type="button" onclick="calculateScore()">Submit</button>
+</form>
+<p id="score"></p>
+
+<script>
+function calculateScore() {
+    var score = 0;
+    var answers = document.getElementById("quizForm").elements;
+    if (answers["q1"].value === "Paris") score++;
+    if (answers["q2"].value === "4") score++;
+    document.getElementById("score").innerText = "Score: " + score;
+}
+</script>
+</body>
+</html>

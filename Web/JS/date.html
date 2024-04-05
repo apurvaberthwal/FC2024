@@ -1,0 +1,22 @@
+<html>
+<body>
+<p id="p1"> </p>
+<p id="p2"> </p>
+<script>
+
+var date1= new Date('11/9/2001')
+var date2= new Date('11/9/2001')
+console.log(date1)
+if (date1 >date2)
+{
+document.getElementById("p1").innerHTML=date1.toDateString() + "is greater than " + date2.toDateString()
+
+}
+else if (date1<date2) {
+document.getElementById("p1").innerHTML=date2.toDateString() + "is greater than " + date1.toDateString()
+
+}
+else{
+document.getElementById("p1").innerHTML=date1.toDateString() + "is equal to " + date2.toDateString()
+}
+</script>

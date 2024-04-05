@@ -1,0 +1,26 @@
+
+<body>
+<p id="p1"></p>
+<p id="p2"> </p>
+<p id="p3"></p>
+<p id="p4"> </p>
+<p id="p5"></p>
+<p id="p6"> </p>
+<script>
+
+	var str1= new String ("Hello World")
+	var str2 = new String ("Hello World")
+	var str3 = "Hello World"
+	var str4=str3
+	console.log(str1)
+	console.log(str2)
+	
+	document.getElementById("p1").innerHTML= str1==str2 // comparing objects 
+		document.getElementById("p2").innerHTML= str3==str4
+	document.getElementById("p3").innerHTML= str1===str3
+	document.getElementById("p4").innerHTML= typeof(str1)
+	document.getElementById("p5").innerHTML= typeof(str3)
+
+
+</script>
+</body>

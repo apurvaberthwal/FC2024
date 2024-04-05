@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Current Date and Time</title>
+</head>
+<body>
+<p id="datetime"></p>
+
+<script>
+function updateDateTime() {
+    var now = new Date();
+    var datetime = now.toLocaleString();
+    document.getElementById("datetime").innerText = datetime;
+}
+
+// Update every second
+setInterval(updateDateTime, 1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>Image Slider</title>
+<style>
+img {
+    width: 100px;
+    height: auto;
+    display: none;
+}
+</style>
+</head>
+<body>
+<img src="1.svg" alt="Image 1" id="slider">
+<button onclick="prevImage()">Previous</button>
+<button onclick="nextImage()">Next</button>
+
+<script>
+var images = ['1.svg', '2.svg', '3.svg'];
+var index = 0;
+var slider = document.getElementById('slider');
+
+function showImage() {
+    slider.src = images[index];
+    slider.style.display = 'block';
+}
+
+function prevImage() {
+    index = (index === 0) ? images.length - 1 : index - 1;
+    showImage();
+}
+
+function nextImage() {
+    index = (index === images.length - 1) ? 0 : index + 1;
+    showImage();
+}
+
+showImage();
+</script>
+</body>
+</html>

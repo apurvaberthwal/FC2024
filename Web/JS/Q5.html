@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input Type Identifier</title>
+</head>
+<body>
+    <h2>Input Type Identifier</h2>
+    <label for="input">Enter something:</label>
+    <input type="text" id="input">
+    <button onclick="identifyType()">Identify Type</button>
+    <p id="type"></p>
+
+    <script>
+        function identifyType() {
+            const input = document.getElementById('input').value;
+            let type = typeof input;
+            if (Array.isArray(input)) {
+                type = 'array';
+            } else if (type === 'object') {
+                type = Array.isArray(input) ? 'array' : 'object';
+            }
+            document.getElementById('type').textContent = `Input type: ${type}`;
+        }
+    </script>
+</body>
+</html

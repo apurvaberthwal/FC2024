@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>Password Strength Checker</title>
+</head>
+<body>
+<input type="password" id="passwordInput" placeholder="Enter password">
+<button onclick="checkPasswordStrength()">Check Strength</button>
+<p id="strength"></p>
+
+<script>
+function checkPasswordStrength() {
+    var password = document.getElementById("passwordInput").value;
+    var strength = '';
+
+    // Check length
+    if (password.length < 8) {
+        strength = 'Weak';
+    } else {
+        // Check for presence of different character types
+        var hasUpperCase = /[A-Z]/.test(password);
+        var hasLowerCase = /[a-z]/.test(password);
+        var hasNumbers = /[0-9]/.test(password);
+        var hasSpecialChars = /[!@#$%^&*(),.?":{}|<>]/.test(password); // You might want to adjust this depending on what special characters you want to consider
+
+        // Calculate strength based on presence of different types of characters
+        if (hasUpperCase && hasLowerCase && hasNumbers && hasSpecialChars) {
+            strength = 'Very Strong';
+        } else if ((hasUpperCase && hasLowerCase && hasNumbers) || (hasUpperCase && hasLowerCase && hasSpecialChars) || (hasUpperCase && hasNumbers && hasSpecialChars) || (hasLowerCase && hasNumbers && hasSpecialChars)) {
+            strength = 'Strong';
+        } else if ((hasUpperCase && hasLowerCase) || (hasUpperCase && hasNumbers) || (hasUpperCase && hasSpecialChars) || (hasLowerCase && hasNumbers) || (hasLowerCase && hasSpecialChars) || (hasNumbers && hasSpecialChars)) {
+            strength = 'Moderate';
+        } else {
+            strength = 'Weak';
+        }
+    }
+    
+    document.getElementById("strength").innerText = strength;
+}
+</script>
+</body>
+</html>

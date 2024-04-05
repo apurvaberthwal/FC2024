@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum Calculator</title>
+    <script>
+        function calculateSum() {
+
+            var inputValue = document.getElementById("numberInput").value;
+
+            var number = parseInt(inputValue);
+            if (isNaN(number) || number <= 0) {
+                document.getElementById("result").innerHTML = "Please enter a valid positive number.";
+                return;
+            }
+            var sum = 0;
+            var i = 1;
+            while (i <= number) {
+                sum += i;
+                i++;
+            }
+
+            document.getElementById("result").innerHTML = "The sum of numbers from 1 to " + number + " is: " + sum;
+        }
+    </script>
+</head>
+<body>
+    <h1>Sum Calculator</h1>
+    <label for="numberInput">Enter a positive number:</label>
+    <input type="text" id="numberInput">
+    <button onclick="calculateSum()">Calculate Sum</button>
+    
+    <p id="result"></p>
+</body>
+</html>

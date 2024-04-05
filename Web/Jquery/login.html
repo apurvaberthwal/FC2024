@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 50%;
+            margin: 100px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .error {
+            color: red;
+            margin-top: -10px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+    </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("form").submit(function(event){
+			var username = $("#username").val()
+			var email = $("#email").val()
+			var pass = $("#password").val()
+		console.log(username,email,pass)
+			if (username.length <1 || email.length <1 || pass.length <1)
+			{
+				alert("field empty")
+			}
+			else if(pass.length<8){
+			alert("Password should be greater than 8")
+
+			}
+			else if(!/[A-Z]/.test(pass))
+	{	
+	alert("atleast 1 Uppercase letter")
+	}
+			else if(!/[a-z]/.test(pass))
+	{
+			alert("atleast 1 lowercase char")
+	}
+			else if (!/[0-9]/.test(pass))
+{
+	alert("1 ")
+}
+
+			else{
+			alert("Successfully Registered")
+		}
+
+})
+	})
+
+
+</script>
+
+
+
+
+
+
+
+
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form id="form" method ="POST" action="#">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" >
+	<label for="username">ID:</label>
+            <input type="text" id="email" name="email" >
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password">
+
+          
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>
+
