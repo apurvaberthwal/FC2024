@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Comparison</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section input, .section button {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>String Comparison Examples</h1>
+
+    <div class="section">
+        <h2>Exact Equality Comparison</h2>
+        <label for="string1">Enter first string:</label>
+        <input type="text" id="string1">
+        <label for="string2">Enter second string:</label>
+        <input type="text" id="string2">
+        <button onclick="compareExact()">Compare</button>
+        <div id="exactResult"></div>
+    </div>
+
+
+
+    <div class="section">
+        <h2>Length wise Comparison</h2>
+        <label for="lexString1">Enter first string:</label>
+        <input type="text" id="lexString1">
+        <label for="lexString2">Enter second string:</label>
+        <input type="text" id="lexString2">
+        <button onclick="compareLexicographically()">Compare</button>
+        <div id="lexResult"></div>
+    </div>
+
+    <script>
+        function compareExact() {
+            const str1 = document.getElementById('string1').value;
+            const str2 = document.getElementById('string2').value;
+            const result = str1 === str2 ? 'Strings are exactly equal.' : 'Strings are not equal.';
+            document.getElementById('exactResult').innerText = result;
+        }
+            function compareLexicographically() {
+            const str1 = document.getElementById('lexString1').value.length;
+            
+            const str2 = document.getElementById('lexString2').value.length;
+            console.log(str1,str2)
+
+            let result;
+            if (str1 < str2) result = 'First string is shorter than the second string.';
+            else if (str1 > str2) result = 'First string is longer than the second string.';
+            else result = 'Both strings are of equal length.';
+
+            document.getElementById('lexResult').innerText = result;
+        }
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<html>
+<head>
+  <title>Table Example</title>
+    <style>
+        body {
+            background-color: rgb(251, 245, 245);
+            margin: 0;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: rgb(244, 241, 246);
+            
+        }
+        
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd; 
+
+        }
+        
+        th {
+            background-color: #2c3e50;
+            color: white;
+           
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        
+        td:nth-child(1),
+        td:nth-child(2) {
+            text-align: center;
+        }
+        
+        td:nth-child(3) {
+            text-align: right;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Student Information</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Percentage</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td rowspan="2">Pratiksha</td>
+                <td>Nigdi</td>
+                <td rowspan="2">85%</td>
+            </tr>
+            <tr>
+                <td>City</td>
+            </tr>
+            <tr>
+                <td rowspan="2">Prerna</td>
+                <td>Karve Nagar</td>
+                <td rowspan="2">90%</td>
+            </tr>
+            <tr>
+                <td>Town</td>
+            </tr>
+            <tr>
+                <td rowspan="2  ">Nancy</td>
+                <td>Pradikaran</td>
+                <td rowspan="2">90%</td>
+            </tr>
+            <tr>
+                <td>Town</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

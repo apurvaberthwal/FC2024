@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frames Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;  
+            display: grid;
+            grid-template-rows: auto auto auto;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            background-color: #f4f4f4;
+            height: 100vh;
+        }
+        
+        .frame {
+            background-color: rgb(54, 134, 188);
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: auto;
+        }
+        
+        .frame img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="frame">
+        <h2>Name</h2>
+        <p>Pratiksha</p>
+    </div>
+    <div class="frame">
+        <h2>Address</h2>
+        <p>Pune</p>
+    </div>
+    <div class="frame">
+        <h2>Qualifications</h2>
+        <ul>
+            <li>Bachelor's Degree in Computer Application</li>
+            <li>Master's Degree in Computer Application</li>
+            <li>Certified in Project Management</li>
+        </ul>
+    </div>
+    <div class="frame">
+        <h2>Scrolling Message</h2>
+        <marquee>Welcome to my personal page! Stay tuned for more updates.</marquee>
+    </div>
+    <div class="frame">
+        <h2>Favorite Sites</h2>
+        <ul>
+            <li><a href="https://www.example.com">Example</a></li>
+            <li><a href="https://www.anotherexample.com">Another Example</a></li>
+            <li><a href="https://www.yetanotherexample.com">Yet Another Example</a></li>
+        </ul>
+    </div>
+    <div class="frame">
+        <h2>Image</h2>
+        <img src="https://via.placeholder.com/150" alt="Placeholder Image">
+    </div>
+</body>
+
+</html>

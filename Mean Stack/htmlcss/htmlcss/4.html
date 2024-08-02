@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fergusson College</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .navbar {
+            background-color: #004d99;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+            color: white;
+            text-decoration: none;
+            font-size: 22px;
+        }
+        
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        
+        .navbar-menu {
+            display: flex;
+        }
+        
+        .navbar-menu a {
+            color: #d1d1d1;
+            text-align: center;
+            padding: 15px 20px;
+            text-decoration: none;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        .navbar-menu a:hover {
+            background-color: #003366;
+            color: #fff;
+        }
+        
+        .content {
+            margin-top: 80px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .slider {
+            width: 100%;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        .slides {
+            display: flex;
+            animation: slide 40s infinite;
+        }
+        
+        .slide {
+            flex: 1 0 100%;
+            min-height: 250px;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #e0e0e0;
+            padding: 20px;
+            box-sizing: border-box;
+            font-size: 24px;
+            color: #305787;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+        
+        @keyframes slide {
+            0% {
+                transform: translateX(0%);
+            }
+            33% {
+                transform: translateX(-100%);
+            }
+            66% {
+                transform: translateX(-200%);
+            }
+            100% {
+                transform: translateX(0%);
+            }
+        }
+        
+        .page-content {
+            padding: 20px;
+            text-align: left;
+            margin: auto;
+            max-width: 1200px;
+            background: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        
+        .page-content h2 {
+            margin-top: 0;
+            font-size: 30px;
+            color: #004d99;
+            border-bottom: 2px solid #004d99;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .page-content p {
+            margin-bottom: 20px;
+        }
+        
+        .page-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .page-content ul li {
+            margin: 10px 0;
+        }
+        
+        .page-content a {
+            color: #004d99;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .page-content a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .navbar-menu {
+                flex-direction: column;
+                align-items: flex-start;
+                background: #004d99;
+                position: absolute;
+                top: 60px;
+                right: 0;
+                width: 100%;
+                border-radius: 0 0 8px 8px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                display: none;
+            }
+            .navbar-menu.active {
+                display: flex;
+            }
+            .navbar-menu a {
+                padding: 15px;
+                border-top: 1px solid #003366;
+            }
+            .navbar-menu a:first-child {
+                border-top: none;
+            }
+            .navbar-brand {
+                font-size: 20px;
+            }
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            color: #d5cfcf;
+            font-size: 20px;
+            padding: 15px;
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="#" class="navbar-brand">
+            <img src="logo.png" alt="Logo"> Fergusson College
+        </a>
+        <div class="navbar-menu">
+            <a href="/Home">Home</a>
+            <a href="/InstituteDetails">Institute Details</a>
+            <a href="/CourseDetails">Course Details</a>
+            <a href="/NoticesAndCirculars">Notices & Circulars</a>
+            <a href="/OtherInformation">Other Information</a>
+        </div>
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
+    </div>
+
+    <div class="content home">
+        <div class="slider">
+            <div class="slides">
+                <div class="slide">Accredited by NAAC with an 'A+' grade.</div>
+                <div class="slide">Beautiful and well-maintained campus with recreational facilities.</div>
+                <div class="slide">Ranking nationally and internationally.</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-content">
+        <h2>Institute Details</h2>
+        <p>Fergusson College is a renowned institution offering a diverse range of undergraduate and postgraduate programs. Established in 1885, it is one of the oldest and most prestigious institutions in India.</p>
+        <p>For more details, please visit our <a href="/Home">Home Page</a>.</p>
+    </div>
+
+    <div class="page-content">
+        <h2>Course Details</h2>
+        <ul>
+            <li><a href="/Course/Science">Science Courses</a></li>
+            <li><a href="/Course/Arts">Arts Courses</a></li>
+            <li><a href="/Course/Commerce">Commerce Courses</a></li>
+        </ul>
+        <p>Each course offers a comprehensive curriculum, with details on intake, fees, and eligibility available on their respective pages.</p>
+        <p>For more details, please visit our <a href="/Home">Home Page</a>.</p>
+    </div>
+
+    <div class="page-content">
+        <h2>Notices & Circulars</h2>
+        <ul>
+            <li><a href="/Notice/1">Notice on Admission Procedures</a></li>
+            <li><a href="/Notice/2">Circular on Upcoming Events</a></li>
+            <li><a href="/Notice/3">Notice on Library Hours</a></li>
+        </ul>
+        <p>For more details, please visit our <a href="/Home">Home Page</a>.</p>
+    </div>
+
+    <div class="page-content">
+        <h2>Other Information</h2>
+        <p>Additional resources, including campus facilities, student life, and support services, are available on our <a href="/Home">Home Page</a>.</p>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menu = document.querySelector('.navbar-menu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</body>
+
+</html>
