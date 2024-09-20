@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File and Image Utilities</title>
+</head>
+<body>
+    <h2>Select a File to Get its Extension</h2>
+    <input type="file" id="fileInput" accept="*/*">
+    <p id="fileExtensionOutput"></p>
+
+    <h2>Select an Image to Get its Dimensions</h2>
+    <input type="file" id="imageInput" accept="image/*">
+    <p id="imageDimensionsOutput"></p>
+
+    <script>
+        // Function to get the extension of a selected file
+        document.getElementById('fileInput').addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const fileName = file.name;
+                const fileExtension = fileName.split('.').pop();
+                document.getElementById('fileExtensionOutput').textContent = `File Extension: ${fileExtension}`;
+            }
+        });
+
+        // Function to get the dimensions of a selected image
+        document.getElementById('imageInput').addEventListener('change', function() {
+            const file = this.files[0];
+            if (file) {
+                const img = new Image();
+                img.onload = function() {
+                    document.getElementById('imageDimensionsOutput').textContent = `Width: ${img.width}px, Height: ${img.height}px`;
+                };
+                img.src = URL.createObjectURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
